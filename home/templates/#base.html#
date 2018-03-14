@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" x
+	integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" 
+	crossorigin="anonymous">
+	{% block head %}
+	<meta charset="UTF-8">
+	<title></title>
+	{% endblock %}
+</head>
+<body>
+	<nav class="navbar navbar-light bg-faded">
+		<a class="navbar-brand" href="/">Laughing Boy</a>
+		<a class="navbar-brand" href="/artwork/">Artwork</a>
+		<a class="navbar-brand" href="/codework/">Codework</a>
+		<a class="navbar-brand" href="/animation/">Animation</a>
+	</nav>
+	{% block body %}
+	{% endblock %}
+</body>
+</html>
