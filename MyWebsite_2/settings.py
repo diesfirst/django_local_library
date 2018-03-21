@@ -15,13 +15,11 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = '@m-oj-ldeb5ag24)8wf8w#9pb&$^!eb-@541w7@t!d76m$)lc*'
-import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '@m-oj-ldeb5ag24)8wf8w#9pb&$^!eb-@541w7@t!d76m$)lc*')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -124,10 +122,12 @@ USE_TZ = True
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # The URL to use when referring to static files (where they will be served from)
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
