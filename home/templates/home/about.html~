@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>About</title>
+{% endblock %}
+
+{% block body %}
+
+<p>
+I am currently studying physics and computer science at the University of Massachusetts Amherst while pursuing a career in animation and visual effects. My artistic emphasis is in developing and implementing mathematical models to create novel and aesthetically appealling visuals. My main strengths in this field come from a creative mindset paired with rigorous training the mathematics of physical systems. 
+</p>

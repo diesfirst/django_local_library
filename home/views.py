@@ -12,11 +12,14 @@ def home(request):
 def artwork(request):
 	return render(request, 'home/artwork.html')
 
-def codework(request):
-	return render(request, 'home/codework.html')
+def research(request):
+	return render(request, 'home/research.html')
 
 def animation(request):
 	return render(request, 'home/animation.html')
+
+def about(request):
+        return render(request, 'home/about.html')
 
 def resume(request):
         path = 'media/Michael_Buckley_Resume.pdf'
