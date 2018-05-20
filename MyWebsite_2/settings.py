@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '@m-oj-ldeb5ag24)8wf8w#9pb&$^!e
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['serene-beyond-84425.herokuapp.com','www.michaelbuckley.us','127.0.0.1']
+ALLOWED_HOSTS = ['serene-beyond-84425.herokuapp.com','www.michaelbuckley.us','www.mokchira.com','127.0.0.1']
 
 
 # Application definition
