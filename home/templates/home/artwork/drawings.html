@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Drawings</title>
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+<div class='container-fluid'>
+	<h3>Drawings</h3>
+	<div class='row'>
+	<div class='col'>
+		<figure>
+		<img src='{% static "home/jpgs/manman.jpg" %}' class="img-fluid" alt="Test Image"/>
+		<figcaption> Manman. Pen, digital color. 8.5 x 11. </figcaption>
+		</figure>
+	</div>
+	<div class='col'>
+		<figure>
+		<img src='{% static "home/jpgs/boy.jpg" %}' class="img-fluid" alt="Test Image"/>	
+		<figcaption> Crying Boy. Pencil. 6 x 6. </figcaption>
+		</figure>
+	</div>
+	</div>
+		<div class='row'>
+	<div class='col'>
+		<figure>
+		<img src='{% static "home/jpgs/man_and_bones.jpg" %}' class="img-fluid" alt="Test Image"/>
+		<figcaption> Man and skeleton. Pen. 8.5 x 11. </figcaption>
+		</figure>
+	</div>
+	<div class='col'>
+		<figure>
+		<img src='{% static "home/jpgs/bone.jpg" %}' class="img-fluid" alt="Test Image"/>	
+		<figcaption> Bone. Pen. 8.5 x 11. </figcaption>
+		</figure>
+	</div>
+</div>
+{% endblock %}

@@ -8,4 +8,8 @@ urlpatterns = [
     url(r'animation/', views.animation),
     url(r'resume/', views.resume),
     url(r'about/', views.about),
+    url(r'projects/',views.projects),
+    url(r'paintings/',views.paintings),
+    url(r'webdev/',views.webdev),
+    url(r'drawings/',views.drawings),
 ]

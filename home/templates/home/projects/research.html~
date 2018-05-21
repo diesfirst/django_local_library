@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Codework</title>
+{% endblock %}
+
+{% block body %}
+	<h1>Code placeholder</h1>
+{% endblock %}

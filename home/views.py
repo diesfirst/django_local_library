@@ -10,10 +10,10 @@ def home(request):
 	return render(request, 'home/home.html')
 
 def artwork(request):
-	return render(request, 'home/artwork.html')
+	return render(request, 'home/artwork/artwork.html')
 
 def research(request):
-	return render(request, 'home/research.html')
+	return render(request, 'home/projects/research.html')
 
 def animation(request):
 	return render(request, 'home/animation.html')
@@ -28,6 +28,18 @@ def resume(request):
         pdf = file.read()
         file.close
         return HttpResponse(pdf, content_type='application/pdf')
+
+def projects(request):
+        return render(request, 'home/projects/projects.html')
+
+def paintings(request):
+        return render(request, 'home/artwork/paintings.html')
+
+def webdev(request):
+        return render(request, 'home/resources/webdev.html')
+
+def drawings(request):
+        return render(request, 'home/artwork/drawings.html')
 
         
 

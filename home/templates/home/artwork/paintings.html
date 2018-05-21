@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Artwork</title>
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+<div class='container-fluid'>
+	<h3>Paintings</h3>
+	<div class='row'>
+	<div class='col'>
+		<figure>
+		<img src='{% static "home/jpgs/skull.jpg" %}' class="img-fluid" alt="Test Image"/>
+		<figcaption> Skull. Acrylic. 12 x 12. </figcaption>
+		</figure>
+	</div>
+	<div class='col'>
+		<figure>
+		<img src='{% static "home/jpgs/dad_and_me.jpg" %}' class="img-fluid" alt="Test Image"/>	
+		<figcaption> Father and son. Acrylic. 8 x 10. </figcaption>
+		</figure>
+	</div>
+	</div>
+</div>
+{% endblock %}

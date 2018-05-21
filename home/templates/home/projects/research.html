@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Research</title>
+{% endblock %}
+
+{% load static %}
+	
+	{% block body %}
+	<div class='container-fluid'>
+	<h3>Physics Research</h3>
+	<p>
+		A brief summary of the condensed matter research I participated in while as an undergraduate at Umass Amherst.
+	</p>
+	<h4>Self assembly of soft polymer spheres</h4>
+<p>
+  I worked from summer 2016 until fall 2017 under Professor Greg Grason on a geomtric model for the assembly of squishy block copolymer spheres into lattice structures based on energy minimization. The paper from this research is in the process of being published.
+</p>
+<p>
+  A good deal of my time was spent learning the inner workings of a command line program called <a href="http://facstaff.susqu.edu/brakke/evolver/evolver.html">Surface Evolver</a> which deforms a given polygonal mesh in accordance with applied forces and constraints. I wrote a lengthy python script to generate input files for any periodic structure. Following that, I wrote a script that would allow us to define a new energy as a function of the distance of structures surface elements to its center of mass, as was necessary to test our mathematical model.
+</p>
+<p>
+I also am doing the graphics for the paper. Here is an artistic rendition of a block copolymer sphere. 
+</p>
+
+
+
+<div class="container">
+  <div class="col-md-8" style="padding-left: 0px;  padding-right: 0px;">
+    <img src='{% static "home/jpgs/round_one_1.jpg" %}' class="img-fluid" alt="Polymer Ball"/>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
