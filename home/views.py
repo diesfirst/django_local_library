@@ -41,6 +41,9 @@ def webdev(request):
 def drawings(request):
         return render(request, 'home/artwork/drawings.html')
 
+def coding(request):
+        return render(request, 'home/resources/coding.html')
+
         
 
 

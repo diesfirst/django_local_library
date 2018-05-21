@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'paintings/',views.paintings),
     url(r'webdev/',views.webdev),
     url(r'drawings/',views.drawings),
+    url(r'coding/',views.coding),
 ]
