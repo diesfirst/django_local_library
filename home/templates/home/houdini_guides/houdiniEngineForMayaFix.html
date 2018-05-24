@@ -1,0 +1,7 @@
+
+This will get houdini engine working in Maya. As of May 2018 Maya will crash when loading the plugin.
+To prevent the crash, run this mel command before loading the plugin.
+
+optionVar -iv "houdiniEngineSessionType" 2 -iv "houdiniEngineSessionPipeCustom" 0;
+
+Then load the plugin from the plugin manager as usual.

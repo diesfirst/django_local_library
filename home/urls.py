@@ -13,4 +13,6 @@ urlpatterns = [
     url(r'webdev/',views.webdev),
     url(r'drawings/',views.drawings),
     url(r'coding/',views.coding),
+    url(r'houdini/',views.houdini),
+    url(r'redshift/',views.redshift),
 ]

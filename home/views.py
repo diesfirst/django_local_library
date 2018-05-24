@@ -44,8 +44,11 @@ def drawings(request):
 def coding(request):
         return render(request, 'home/resources/coding.html')
 
-        
+def houdini(request):
+        return render(request, 'home/resources/houdini.html')
 
+def redshift(request):
+        return render(request, 'home/resources/redshift.html')
 
 
 

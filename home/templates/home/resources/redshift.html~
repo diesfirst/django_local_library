@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Redshift</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+<h3>
+	Coding Resources
+</h3>
+<h5>
+	Git
+</h5>
+<h6>
+	Useful Commands
+</h6>
+
+</dl>
+
+</div>
+
+{% endblock %}
