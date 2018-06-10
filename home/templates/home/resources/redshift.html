@@ -16,8 +16,36 @@
 
 <dl>
   <dt><a href=" https://www.redshift3d.com/forums/viewthread/13007/P15">Colored Smoke Workaround</a></dt>
+  <dt><a href="https://vimeo.com/246153550"> Instancing Tutorial</a></dt>
+  <dd> Great tutorial. One thing to mention is that its not necessary to use the intance obj node for this to work, nor the redshift obj parameters. Also, don't instance onto packed primitives! This can cause problems. Just create new points from their positions and copy over any necessary attributes.
   
 </dl>
+
+<h5>
+  Instancing rigid bodies
+</h5>
+<ol>
+<li> Create a number of points equal to the number of total packed prims you have in your sim (not the number of unique pieces. for my building it was around 18,000.) I used the points generate sop for this. Each point corresponds to a packed prim. Drop down a wrangle and plug your points into the first input. Attach your simulated packed prims to the second input. For each point, you will create 3 new attributes: v@pivot, 3@transform, and s@name. The pivot and the transform are primintrinsics and you can copy them from the current packed prim attached to the second input (current meaning the one indexed at @ptnum). Also copy the packed prims positions and piece string attribute (@name_orig in the tutorial) onto your point. You can use the @name to create a new attribute called s@instancefile that points to wherever that particular piece's .rs proxy file is located on disk (this of course could have been done in one step but I like to break it up). Now you have all the attributes on your points that Redshift needs to find and instance your proxies.
+<li> Make sure to add the RS obj parameters to whichever object contains your new instancing points, and BE SURE to untick the box under instancing that says 'Ignore Pivot Point Attribute'. Anddd your done!
+</ol>
+<h6>
+  Notes
+</h6>
+<ul>
+  <li>If you are going to override material parameters on proxy objects using instancing point attributes, make sure that you check the override user data box on in the proxy obj tab.
+  <li>To use displacement and tesselation on proxies, you must check the 'Export Connectivity Data' box on in the archive tab on the export sop, and you must check 'Override tesselation and displacement' on the proxy OBJ parameters. This is of course assuming you intend to do the displacement after bring the proxies in. I have yet to try exporting proxies with displacement embedded within.
+  <li>Also, when using tesselation and displacement on instances of any kind, adaptive tesselation will not work. In order to get correct looking displacements, you must disable adaptive tesselation, set minimum edge length to 0, and depending on the detail of the model you may want to reduce the maximum subdivisions (the default of 6 will be too high for most cases).
+</ul>
+
+<h5>
+Tips
+</h5>
+<h6>
+Shaders
+</h6>
+<ul>
+  <li>Redshift shader networks do not have vector2 type nodes. However, many parameters are vector2 type. Luckily, you can just plugin a vector3 type, and the first 2 components will automatically be used to fill in the vector2 components.
+</ul>
 
 </div>
 
