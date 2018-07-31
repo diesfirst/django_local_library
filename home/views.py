@@ -50,5 +50,8 @@ def houdini(request):
 def redshift(request):
         return render(request, 'home/resources/redshift.html')
 
+def zbrush(request):
+        return render(request, 'home/resources/zbrush.html')
+
 
 

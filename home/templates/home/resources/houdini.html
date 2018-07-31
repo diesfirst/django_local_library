@@ -35,7 +35,13 @@
   <ul>
     <li>"Blast is substantially faster than Delete. Much less overhead and far fewer features. If you have to delete geometry based on a selection or group mask, Blast is your tool of choice."-Jeff Wagner, 2009
   </ul>
+
+    <ul>
+    <li>Tip for network boxes: When expanding or collapsing a network box by holding CTRL while clicking on its + sign the surrounding nodes are shifted as well. This is so you don't end up spilling the contents of your network box all over some lower nodes or get a very long wire to the next node. However, this causes problems when you have nodes up stream that branch off. When you collapse the network box, nodes downstream the box are shifted up, but so are parallel branches of nodes. This might not be what you want. One way to get around this is to put a second network box around the first along with any other nodes you want to be adjusted and leaving out any part of the graph you do not want to be ajusted.
+  </ul>
   
 </div>
+
+
 
 {% endblock %}

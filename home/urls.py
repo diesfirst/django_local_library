@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'coding/',views.coding),
     url(r'houdini/',views.houdini),
     url(r'redshift/',views.redshift),
+    url(r'zbrush/',views.zbrush),
 ]

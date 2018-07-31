@@ -1,16 +1,42 @@
-(placeholder)
+{% extends 'base.html' %}
 
-Tips.
-Uvs.
-Can show UV's by going to Tool -> UV map - morph.
+{% block head %}
+	<title>ZBrush</title>
+{% endblock %}
 
-To create a displacement map but retain the base mesh's initial shape:
-Before sculpting, bring in the base mesh and go to Tool > Morph Target and set a morph target. Then you can go ahead and divide and sculpt in detail. When you are ready to make the displacement map, drop back down to sub div 1 and go to Morph Target > Switch to bring back the initial mesh shape. Don't go back up in sub divisions or this will overwrite those levels. Just export the displacement map.
+{% block body %}
 
-Good site for displacement map information:
-https://www.cggallery.com/tutorials/displacement/
+<div class="container-fluid">
 
-General CG:
+  <h3>
+    ZBrush Resources
+  </h3>
+
+  <h5> Tips </h5>
+  <h6>UVs</h6>
+
+  <ul>
+    <li>Can show UV's by going to Tool -> UV map - morph.
+    <li>To create a displacement map but retain the base mesh's initial shape:
+      Before sculpting, bring in the base mesh and go to Tool > Morph Target and set a morph target. Then you can go ahead and divide and sculpt in detail. When you are ready to make the displacement map, drop back down to sub div 1 and go to Morph Target > Switch to bring back the initial mesh shape. Don't go back up in sub divisions or this will overwrite those levels. Just export the displacement map.
+    <li>Good site for displacement map information:
+      https://www.cggallery.com/tutorials/displacement/
+    <li>General CG:
 When you create uv maps, don't go the full range from 0 to 1, because any vertices laying on 1 will actually wrap back around to 0, (in other words, the true UV space range is actually from 0 to 0.999..)
+      
+  </ul>
+  
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
 
 
